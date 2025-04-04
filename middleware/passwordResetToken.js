@@ -1,10 +1,6 @@
 import jwt from "jsonwebtoken"
 
 
-const checkUserExist = `
-select * from users where email = $1
-`
-
 export const passwordResetTokenExists = async (req , res , next) => {
     
     try {
