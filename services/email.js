@@ -8,15 +8,15 @@ dotenv.config();
 const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
-        user: process.env.EMAIL_USER,     //"himanshutest11150@gmail.com", // Replace with your email
-        pass: process.env.EMAIL_PASSWORD    //"sbda unvu hcrk oddd"  // Replace with your email password or app password
+        user: process.env.EMAIL_USER,     
+        pass: process.env.EMAIL_PASSWORD    
     }
 });
 
 // Function to send OTP via email
 export const sendOtpEmail = async (email, otp) => {
     const mailOptions = {
-        from:  process.env.EMAIL_USER, //"himanshutest11150@gmail.com",
+        from:  process.env.EMAIL_USER,
         to: email,
         subject: "Your OTP for Email Verification",
         text: `Your OTP is: ${otp}. It will expire in 5 minutes.`
