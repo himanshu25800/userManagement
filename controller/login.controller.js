@@ -2,6 +2,8 @@ import pool from "../services/db.js";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 
+
+
 const checkUserExist = `
 select * from users where email = $1
 `

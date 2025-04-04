@@ -3,6 +3,8 @@ import pool from "../services/db.js";
 import bcrypt from "bcrypt"
 
 
+
+
 const updatePasswordQuery = `
 UPDATE users SET password = $1 WHERE email = $2;
 `

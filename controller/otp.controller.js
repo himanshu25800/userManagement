@@ -1,5 +1,9 @@
-import {verifyOtp, accountActive} from "./email.controller.js"
-import {generateOtp, storeOtp, deleteOtp} from "./email.controller.js"
+// import {verifyOtp, accountActive} from "./email.controller.js"
+import { verifyOtp } from "../utils/verify-otp.js"
+import {accountActive } from "../utils/activateAccount.js"
+import {generateOtp} from "../utils/generateOtp.js"
+import { storeOtp } from "../utils/storeOtp.js"
+import { deleteOtp } from "../utils/delete-otp.js"
 import {sendOtpEmail} from "../services/email.js"
 
 export const sendOtp  = async (req, res) => {
@@ -18,6 +22,8 @@ export const sendOtp  = async (req, res) => {
         "otp":otp
     })
 }
+
+
 
 export const requestOtp  = async (req, res) => {
     const {email} = req.body

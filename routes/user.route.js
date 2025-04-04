@@ -4,9 +4,8 @@ import  {loginUser} from "../controller/login.controller.js"
 import { sendOtp, isOtpCorrect, requestOtp } from "../controller/otp.controller.js";
 import { auth } from "../middleware/authToken.js";
 import { updatePassword } from "../controller/updatePassword.controller.js";
-import { genPasswordToken } from "../middleware/genPasswordToken.js";
 import { passwordResetTokenExists } from "../middleware/passwordResetToken.js";
-import { resetPassword } from "../controller/forgotPassword.controller.js";
+import { resetPassword, genPasswordToken } from "../controller/forgotPassword.controller.js";
 
 
 

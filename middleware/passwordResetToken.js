@@ -1,5 +1,4 @@
 import jwt from "jsonwebtoken"
-import pool from "../services/db.js"
 
 
 const checkUserExist = `
